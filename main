@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Please enter a number: ";
+    cin >> num;
+
+    // Selection control statement with intentional errors
+    if (num > 5) {
+        cout << "The number is greater than 5" << endl;
+    }
+    else if (num < 5) {
+        cout << "The number is less than 5" << endl;
+    }
+    else
+        cout << "The number is exactly 5" << endl;
+
+    // Intentional Errors Below:
+    cout << "This line has a missing quote << endl;   // ERROR 1: missing closing quote
+    switch num {                                   // ERROR 2: wrong syntax, should be switch(num)
+        case 5:
+            cout << "Number is five" << endl;
+            break;
+    }
+
+    return 0;
+}
